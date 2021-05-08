@@ -1,0 +1,7 @@
+manage_inventory.inventory_add:
+  route_name: entity.manage_inventory.add_form
+  title: 'Add Content'
+
+  appears_on:
+    - entity.content_entity_manage_inventory.collection
+    - entity.content_entity_manage_inventory.canonical

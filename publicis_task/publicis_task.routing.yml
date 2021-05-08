@@ -1,0 +1,47 @@
+entity.content_entity_manage_inventory.canonical:
+  path: '/content_entity_manage_inventory/{content_entity_manage_inventory}'
+  defaults:
+    _entity_view: 'content_entity_manage_inventory'
+    _title: 'publicis Content'
+  requirements:
+    _entity_access: 'content_entity_manage_inventory.view'
+
+entity.content_entity_manage_inventory.collection:
+  path: '/content_entity_manage_inventory/list'
+  defaults:
+    _entity_list: 'content_entity_manage_inventory'
+    _title: 'publicis List'
+  requirements:
+    _permission: 'view inventory entity'
+
+entity.manage_inventory.add_form:
+  path: '/content_entity_manage_inventory/add'
+  defaults:
+    _entity_form: content_entity_manage_inventory.add
+    _title: 'publicis Task'
+  requirements:
+    _entity_create_access: 'content_entity_manage_inventory'
+
+entity.content_entity_manage_inventory.edit_form:
+  path: '/content_entity_manage_inventory/{content_entity_manage_inventory}/edit'
+  defaults:
+    _entity_form: content_entity_manage_inventory.edit
+    _title: 'Edit'
+  requirements:
+    _entity_access: 'content_entity_manage_inventory.edit'
+
+entity.content_entity_manage_inventory.delete_form:
+  path: '/inventory/{content_entity_manage_inventory}/delete'
+  defaults:
+    _entity_form: content_entity_manage_inventory.delete
+    _title: 'Delete'
+  requirements:
+    _entity_access: 'content_entity_manage_inventory.delete'
+
+manage_inventory.inventory_settings:
+  path: 'admin/structure/content_entity_manage_inventory_settings'
+  defaults:
+    _form: '\Drupal\publicis_task\Form\InventorySettingsForm'
+    _title: 'publicis Task Settings'
+  requirements:
+    _permission: 'administer contact entity'

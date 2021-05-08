@@ -1,0 +1,6 @@
+name: publicis Task
+description: 'Custom Entity with view edit delete operation'
+type: module
+package: publicis
+core: 8.x
+core_version_requirement: ^8 || ^9
